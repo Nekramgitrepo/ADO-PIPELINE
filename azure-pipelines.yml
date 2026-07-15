@@ -20,9 +20,9 @@ stages:
             provider: 'azurerm'
             command: 'init'
             backendServiceArm: 'nekram svc'
-            backendAzureRmResourceGroupName: 'RG-DEV'
-            backendAzureRmStorageAccountName: 'vikrantstorage9987'
-            backendAzureRmContainerName: 'pravinnekramvikram'
+            backendAzureRmResourceGroupName: 'dev-rgnew'
+            backendAzureRmStorageAccountName: 'devstorageado'
+            backendAzureRmContainerName: 'adocontainer'
             backendAzureRmKey: 'terraform.tfstate'
         - task: TerraformTask@5
           inputs:
