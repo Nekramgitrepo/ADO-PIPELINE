@@ -29,6 +29,15 @@ stages:
             provider: 'azurerm'
             command: 'plan'
             environmentServiceNameAzureRM: 'nekram svc'
+  - stage: Terraformapply
+    displayName: Terraform apply
+    jobs:
+      - job: Terraformjob1
+        displayName: Terraformapply
+        steps:
+        - task: TerraformInstaller@1
+          inputs:
+            terraformVersion: 'latest'
         - task: TerraformTask@5
           inputs:
             provider: 'azurerm'
