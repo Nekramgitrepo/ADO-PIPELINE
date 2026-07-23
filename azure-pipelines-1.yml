@@ -3,7 +3,7 @@ trigger:
    include:
     - main
 
-pool: pipeline pool
+pool: nekramagent
   
 stages:
   - stage: 
@@ -23,9 +23,9 @@ stages:
               provider: 'azurerm'
               command: 'init'
               backendServiceArm: 'nekram svc'
-              backendAzureRmResourceGroupName: 'rgpipeline'
-              backendAzureRmStorageAccountName: 'stg123pipeline'
-              backendAzureRmContainerName: 'contpipeline'
+              backendAzureRmResourceGroupName: 'dev-rgnew'
+              backendAzureRmStorageAccountName: 'devstorageado'
+              backendAzureRmContainerName: 'adocontainer'
               backendAzureRmKey: 'david.tfstate'
           - task: TerraformTask@5
             inputs:
